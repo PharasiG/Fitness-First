@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Fitness</string>
+    <string name="login">Login</string>
+    <string name="email">Username/Email</string>
+    <string name="password">Password</string>
+    <string name="cpassword">Confirm Password</string>
+    <string name="signIn">Sign In</string>
+    <string name="signUp">Sign Up</string>
+    <string name="or">OR</string>
+    <string name="create_acc">Don\'t have an account?</string>
+    <string name="username">Username</string>
+    <string name="cd_logo">logo image</string>
+    <string name="acc_exist">Already have an account?</string>
+    <string name="your_web_client_id">113065284282467709171</string>
+</resources>

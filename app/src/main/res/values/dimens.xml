@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="big_text">44sp</dimen>
+    <dimen name="padding">20dp</dimen>
+    <dimen name="radius">25dp</dimen>
+    <dimen name="normal_text">20sp</dimen>
+    <dimen name="margin_left">20dp</dimen>
+    <dimen name="margin_top">25dp</dimen>
+</resources>
