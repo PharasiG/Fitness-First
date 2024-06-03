@@ -23,7 +23,6 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-
 class SignInActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignInBinding
     private lateinit var inputEmail: EditText
@@ -69,7 +68,7 @@ class SignInActivity : AppCompatActivity() {
     }
 
     fun onImageClick(view: View) {
-        Toast.makeText(this, "Button Clicked", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Signing In", Toast.LENGTH_SHORT).show()
         signInWithGoogle()
     }
 
@@ -161,5 +160,4 @@ class SignInActivity : AppCompatActivity() {
             }
         }
     }
-
 }

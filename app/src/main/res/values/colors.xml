@@ -11,4 +11,12 @@
 
     <color name="primary">#6D60F8</color>
     <color name="secondary">#673AB7</color>
+    <!-- colors water -->
+    <color name="colorWaterPrimary">#041534</color>
+    <color name="colorWaterPrimaryDark">#00000f</color>
+    <color name="colorWaterAccent">#313a5e</color>
+    <color name="colorCongratulations">#00000f</color>
+    <color name="colorText">#0B2239</color>
+    <color name="colorTextLight">#1f364d</color>
+    <color name="colorButton">#00A6C8</color>
 </resources>
