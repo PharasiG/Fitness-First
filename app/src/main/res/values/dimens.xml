@@ -9,4 +9,8 @@
     <dimen name="progressBar_dimen">200dp</dimen>
     <dimen name="progressBar_dimen_height">100dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <!-- water dimen -->
+    <dimen name="header_margin">8dp</dimen>
+    <dimen name="header_size">90dp</dimen>
+    <dimen name="header_padding">16dp</dimen>
 </resources>

@@ -33,7 +33,7 @@ class FragmentHome : Fragment(), View.OnClickListener {
     override fun onClick(view: View) {
         when (view.id) {
             R.id.water_progressBar -> {
-                val intent = Intent(activity, WaterActivity::class.java)
+                val intent = Intent(activity, MainActivity::class.java)
                 startActivity(intent)
             }
         }
