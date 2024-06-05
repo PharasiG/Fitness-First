@@ -15,7 +15,7 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
-    <style name="Theme.Fitness" parent="Base.Theme.Fitness" />
+    <style name="Theme.Fitness" parent="Theme.Material3.DayNight" />
 
     <style name="cardStyle" parent="@style/Widget.MaterialComponents.CardView">
         <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialCardView.Cut
@@ -33,5 +33,12 @@
     <style name="DialogAnimation">
         <item name="android:windowEnterAnimation">@anim/slide_in</item>
         <item name="android:windowExitAnimation">@anim/slide_out</item>
+    </style>
+
+    <style name="Log" parent="Theme.Fitness">
+        <item name="android:typeface">monospace</item>
+        <item name="android:padding">@dimen/margin_medium</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
     </style>
 </resources>

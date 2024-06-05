@@ -7,25 +7,185 @@
     android:layout_height="match_parent"
     tools:context=".FragmentHome">
 
-    <com.example.fitness.CircleProgressBar
-        android:id="@+id/steps_progressBar"
-        android:layout_width="@dimen/progressBar_dimen"
-        android:layout_height="@dimen/progressBar_dimen_height"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/stepCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        app:cardCornerRadius="@dimen/radius"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:progress="35"
-        app:progressBarThickness="4dp" />
-
-    <com.example.fitness.CircleProgressBar
-        android:id="@+id/water_progressBar"
-        android:layout_width="@dimen/progressBar_dimen"
-        android:layout_height="@dimen/progressBar_dimen_height"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toEndOf="@+id/steps_progressBar"
-        app:layout_constraintTop_toTopOf="parent"
-        app:progress="35"
-        app:progressBarThickness="4dp"
         android:clickable="true"
-        android:focusable="true" />
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/stepContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/stepProgressBar"
+                android:layout_width="@dimen/progressBar_dimen"
+                android:layout_height="@dimen/progressBar_dimen"
+                android:padding="8dp"
+                app:indicatorColor="@color/lavender"
+                app:indicatorSize="@dimen/progressBar_dimen"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:trackThickness="15dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/stepTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/steps"
+                android:textSize="@dimen/medium_text"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.515"
+                app:layout_constraintStart_toEndOf="@+id/stepProgressBar"
+                app:layout_constraintTop_toBottomOf="@+id/stepTrackTxt"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/stepTrackTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="84dp"
+                android:text="5000/10000"
+                android:textSize="@dimen/normal_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.516"
+                app:layout_constraintStart_toEndOf="@+id/stepProgressBar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/runningImg"
+                android:layout_width="@dimen/progressBar_dimen_height"
+                android:layout_height="@dimen/progressBar_dimen_height"
+                android:src="@drawable/running_img"
+                app:layout_constraintBottom_toBottomOf="@id/stepProgressBar"
+                app:layout_constraintEnd_toEndOf="@+id/stepProgressBar"
+                app:layout_constraintStart_toStartOf="@+id/stepProgressBar"
+                app:layout_constraintTop_toTopOf="@+id/stepProgressBar" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/waterCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        app:cardCornerRadius="@dimen/radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stepCardView"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/waterContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/waterProgressBar"
+                android:layout_width="@dimen/progressBar_dimen"
+                android:layout_height="@dimen/progressBar_dimen"
+                android:padding="8dp"
+                app:indicatorColor="@color/lavender"
+                app:indicatorSize="@dimen/progressBar_dimen"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:trackThickness="15dp" />
+
+            <TextView
+                android:id="@+id/waterTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/water"
+                android:textSize="@dimen/medium_text"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintStart_toEndOf="@+id/waterProgressBar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.608" />
+
+            <TextView
+                android:id="@+id/waterTrackTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1800/2000 ml"
+                android:textSize="@dimen/normal_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toEndOf="@+id/waterProgressBar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.431" />
+
+            <ImageView
+                android:id="@+id/waterImg"
+                android:layout_width="@dimen/progressBar_dimen_height"
+                android:layout_height="@dimen/progressBar_dimen_height"
+                android:src="@drawable/water_droplet"
+                app:layout_constraintBottom_toBottomOf="@id/waterProgressBar"
+                app:layout_constraintEnd_toEndOf="@+id/waterProgressBar"
+                app:layout_constraintStart_toStartOf="@+id/waterProgressBar"
+                app:layout_constraintTop_toTopOf="@+id/waterProgressBar" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/exerciseCardView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/progressBar_dimen"
+        android:layout_margin="@dimen/margin"
+        app:cardCornerRadius="@dimen/radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/waterCardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/startExer"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="@dimen/medium_text"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.432" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="@dimen/progressBar_dimen"
+                android:layout_height="@dimen/progressBar_dimen"
+                android:src="@drawable/logo_crop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

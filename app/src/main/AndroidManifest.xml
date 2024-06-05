@@ -4,6 +4,9 @@
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,13 +18,17 @@
         android:theme="@style/Theme.Fitness"
         tools:targetApi="31">
         <activity
+            android:name=".StepTrackerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Fitness" />
+        <activity
             android:name=".NotificationActivity"
             android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.Fitness" />
         <activity
             android:name=".HistoryActivity"
-            android:parentActivityName=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AboutActivity"
             android:exported="false"
@@ -52,8 +59,8 @@
             android:resource="@array/preloaded_fonts" />
 
         <service
-            android:permission="android.permission.BIND_JOB_SERVICE"
-            android:name="com.example.fitness.job.DiaryJobService" />
+            android:name=".job.DiaryJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
     </application>
 
 </manifest>
